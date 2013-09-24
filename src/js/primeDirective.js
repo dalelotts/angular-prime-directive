@@ -37,7 +37,7 @@ angular.module('ui.prime.directive', [])
         "           <td colspan='10' >" +
         "              <span    class='num' " +
         "                       data-ng-repeat='value in data.values'  " +
-        "                       data-ng-class='{active: value.prime}' " +
+        "                       data-ng-class='{prime: value.prime}' " +
         "                       >{{ value.display }}</span> " +
         "           </td>" +
         "       </tr>" +
