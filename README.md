@@ -1,9 +1,12 @@
 # Angular Prime Directive
-================================
 
 Native AngularJS directive that displays a Prime Number table, which is a convenient way to visualize the prime number distribution.
 
 [![Build Status](https://travis-ci.org/dalelotts/angular-prime-directive.png?branch=master)](https://travis-ci.org/dalelotts/angular-prime-directive)
+
+# Screenshot
+
+![Prime Directive default view](https://raw.github.com/dalelotts/angular-prime-directive/master/screenshots/default.png)
 
 #Dependencies
 
