@@ -1,0 +1,26 @@
+{
+  "name": "angular-prime-directive",
+  "version": "0.1.0",
+  "description": "This angular directive emulates the Grails sortableColumn tag.",
+  "author": "https://github.com/dalelotts/angular-prime-directive/graphs/contributors",
+  "license": "MIT",
+  "homepage": "https://github.com/dalelotts/angular-prime-directive",
+  "main": "./src/js/sortableColumn.js",
+  "ignore": [
+    "**/.*",
+    "screenshots",
+    "node_modules",
+    "bower_components",
+    "test*",
+    "demo*",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.x"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.x",
+    "jquery": "1.10.2"
+  }
+}
