@@ -2,7 +2,12 @@
 
 Native AngularJS directive that displays a Prime Number table, which is a convenient way to visualize the prime number distribution.
 
+[![MIT License][license-image]][license-url]
 [![Build Status](https://travis-ci.org/dalelotts/angular-prime-directive.png?branch=master)](https://travis-ci.org/dalelotts/angular-prime-directive)
+[![Dependency Status](https://david-dm.org/dalelotts/angular-prime-directive.svg)](https://david-dm.org/dalelotts/angular-prime-directive)
+[![devDependency Status](https://david-dm.org/dalelotts/angular-prime-directiver/dev-status.png)](https://david-dm.org/dalelotts/angular-prime-directive#info=devDependencies)
+[![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=F3FX5W6S2U4BW&lc=US&item_name=Dale%20Lotts&item_number=angular%2dbootstrap%2ddatetimepicker&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted "Donate one-time to this project using Paypal")
+
 
 # Screenshot
 
@@ -64,3 +69,19 @@ Apply the directive to your form elements:
 ## Options
 
 None
+
+## License
+
+angular-prime-directive is freely distributable under the terms of the [MIT license](LICENSE).
+
+## Donating
+Support this project and other work by Dale Lotts via [gittip][gittip-dalelotts].
+
+[![Support via Gittip][gittip-badge]][gittip-dalelotts]
+
+[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
+[gittip-dalelotts]: https://www.gittip.com/dalelotts/
+
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
+
