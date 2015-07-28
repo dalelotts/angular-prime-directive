@@ -32,7 +32,7 @@ describe('sortable column', function () {
       expect(element.find('span').length).toBe(100);
     });
   });
-  describe('clicking next link updates display', function () {
+  describe('clicking next link on initial display updates display', function () {
     it('first span contains 101 after clicking next', function () {
       jQuery('.next', element).trigger('click');
       expect(jQuery(jQuery('span', element)[0]).html()).toBe('101');

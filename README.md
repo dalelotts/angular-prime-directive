@@ -1,4 +1,4 @@
-# Angular Prime Directive
+# Angular Prime Directive 0.1.2
 
 Native AngularJS directive that displays a Prime Number table, which is a convenient way to visualize the prime number distribution.
 
@@ -13,19 +13,21 @@ Native AngularJS directive that displays a Prime Number table, which is a conven
 Requires:
  * AngularJS 1.1.3 or higher (Not tested with 1.0.x)
 
-#Testing
-We use karma and jshint to ensure the quality of the code. The easiest way to run these checks is to use grunt:
+#Setup and Testing
+We use karma, jshint, jscs, and istanbul to ensure the quality of the code. The easiest way to run these checks is to run these commands:
 
 ```
-npm install -g grunt-cli
-npm install bower grunt
+npm install -g gulp
+npm install
+npm test
 ```
 
 The karma task will try to open Chrome as a browser in which to run the tests. Make sure this is available or change the configuration in test\test.config.js
 
-#Usage
-We use bower for dependency management. Add
+#Dependencies
+We use bower for dependency management.
 
+#Usage
 ```json
 dependencies: {
     "angular-prime-directive": "latest"

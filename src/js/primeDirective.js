@@ -1,8 +1,8 @@
-/*globals angular, moment, jQuery */
+/*globals angular */
 /*jslint vars:true */
 
 /**
- * @license angular-prime-directive  v0.1.0
+ * @license angular-prime-directive  v0.1.2
  * (c) 2013 Knight Rider Consulting, Inc. http://www.knightrider.com
  * License: MIT
  */
@@ -15,34 +15,34 @@
 
 angular.module('ui.prime.directive', [])
   .directive('primeDirective', [function () {
-    "use strict";
+    'use strict';
 
     return {
       restrict: 'A',
-      template: "<div class='prime-directive'>" +
-        "<table class='table-condensed'>" +
-        "   <thead>" +
-        "       <tr>" +
-        "           <th >" +
-        "             <a class='previous' href='' data-ng-click=\"changeView(data.leftValue ,$event)\">&lt;&lt;&nbsp;Previous</a>&nbsp;" +
-        "           </th>" +
-        "           <th colspan='8' title='AngularJS Prime Directive'>&nbsp;Prime&nbsp;Number&nbsp;Table</th>" +
-        "           <th >" +
-        "             <a class='next' href='' data-ng-click=\"changeView(data.rightValue,$event)\">Next&nbsp;&gt;&gt;</a>" +
-        "           </th>" +
-        "       </tr>" +
-        "   </thead>" +
-        "   <tbody>" +
+      template: '<div class=\'prime-directive\'>' +
+        '<table class=\'table-condensed\'>' +
+        '   <thead>' +
+        '       <tr>' +
+        '           <th >' +
+        '             <a class=\'previous\' href=\'\' data-ng-click="changeView(data.leftValue ,$event)">&lt;&lt;&nbsp;Previous</a>&nbsp;' +
+        '           </th>' +
+        '           <th colspan=\'8\' title=\'AngularJS Prime Directive\'>&nbsp;Prime&nbsp;Number&nbsp;Table</th>' +
+        '           <th >' +
+        '             <a class=\'next\' href=\'\' data-ng-click="changeView(data.rightValue,$event)">Next&nbsp;&gt;&gt;</a>' +
+        '           </th>' +
+        '       </tr>' +
+        '   </thead>' +
+        '   <tbody>' +
         '       <tr >' +
-        "           <td colspan='10' >" +
-        "              <span    class='num' " +
-        "                       data-ng-repeat='value in data.values'  " +
-        "                       data-ng-class='{prime: value.prime}' " +
-        "                       >{{ value.display }}</span> " +
-        "           </td>" +
-        "       </tr>" +
-        "   </tbody>" +
-        "</table></div>",
+        '           <td colspan=\'10\' >' +
+        '              <span    class=\'num\' ' +
+        '                       data-ng-repeat=\'value in data.values\'  ' +
+        '                       data-ng-class=\'{prime: value.prime}\' ' +
+        '                       >{{ value.display }}</span> ' +
+        '           </td>' +
+        '       </tr>' +
+        '   </tbody>' +
+        '</table></div>',
       replace: true,
       scope: {},
       link: function (scope) {
@@ -78,10 +78,10 @@ angular.module('ui.prime.directive', [])
             'values': []
           };
 
-          for (var i = 0; i < 100; i++) {
+          for (var i = 0; i < 100; i = i + 1) {
             var value = {
               'display': startValue + i,
-              'prime': isPrime(startValue + i)
+              'prime': !isPrime(startValue + i)
             };
 
             result.values.push(value);
