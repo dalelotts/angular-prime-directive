@@ -2,7 +2,7 @@
 /*jslint vars:true */
 
 /**
- * @license angular-prime-directive version: 0.1.4
+ * @license angular-prime-directive version: 0.1.5
  * (c) 2013 Knight Rider Consulting, Inc. http://www.knightrider.com
  * License: MIT
  */
@@ -81,7 +81,7 @@ angular.module('ui.prime.directive', [])
           for (var i = 0; i < 100; i = i + 1) {
             var value = {
               'display': startValue + i,
-              'prime': !isPrime(startValue + i)
+              'prime': isPrime(startValue + i)
             };
 
             result.values.push(value);
