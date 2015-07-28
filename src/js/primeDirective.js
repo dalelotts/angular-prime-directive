@@ -2,7 +2,7 @@
 /*jslint vars:true */
 
 /**
- * @license angular-prime-directive  v0.1.2
+ * @license angular-prime-directive version: 0.1.4
  * (c) 2013 Knight Rider Consulting, Inc. http://www.knightrider.com
  * License: MIT
  */

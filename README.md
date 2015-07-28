@@ -1,4 +1,4 @@
-# Angular Prime Directive 0.1.2
+# Angular Prime Directive version: 0.1.4
 
 Native AngularJS directive that displays a Prime Number table, which is a convenient way to visualize the prime number distribution.
 
