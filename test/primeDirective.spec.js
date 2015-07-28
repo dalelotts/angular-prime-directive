@@ -31,6 +31,18 @@ describe('sortable column', function () {
     it('contains 100 `<span>` elements', function () {
       expect(element.find('span').length).toBe(100);
     });
+    it('contains 25 `.prime` elements', function () {
+      expect(element.find('.prime').length).toBe(25);
+    });
+    it('contains `.prime` elements with value of 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97', function () {
+      var firstPrimes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+
+      var elements = element.find('.prime');
+      expect(elements.length).toBe(25);
+      angular.forEach(elements, function (element, index) {
+        expect(jQuery(element).html()).toBe(firstPrimes[index].toString());
+      });
+    });
   });
   describe('clicking next link on initial display updates display', function () {
     it('first span contains 101 after clicking next', function () {

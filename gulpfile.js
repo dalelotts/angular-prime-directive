@@ -46,9 +46,14 @@ gulp.task('test', function (done) {
 gulp.task('tdd', function (done) {
   gulp.watch(paths.all, ['lint']);
 
-  var config = {
-    configFile: karmaConfig
-  };
+  var config = testConfig(
+    {
+      autoWatch: true,
+      browsers: ['PhantomJS'],
+      configFile: karmaConfig,
+      singleRun: false
+    }
+  );
 
   var server = new Server(config, done);
   server.start();
