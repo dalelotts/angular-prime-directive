@@ -44,7 +44,7 @@ gulp.task('test', function (done) {
 });
 
 gulp.task('tdd', function (done) {
-  gulp.watch(paths.all, ['lint']);
+  gulp.watch(paths.all, ['jscs', 'lint', 'complexity']);
 
   var config = testConfig(
     {
