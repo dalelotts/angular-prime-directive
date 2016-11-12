@@ -1,4 +1,4 @@
-# Angular Prime Directive version: 0.1.5
+# Angular Prime Directive
 
 Native AngularJS directive that displays a Prime Number table, which is a convenient way to visualize the prime number distribution.
 
@@ -30,28 +30,21 @@ npm test
 The karma task will try to open Chrome as a browser in which to run the tests. Make sure this is available or change the configuration in test\test.config.js
 
 #Dependencies
-We use bower for dependency management.
+We use npm for dependency management.
 
 #Usage
-```json
-dependencies: {
-    "angular-prime-directive": "latest"
-}
+```shell
+npm install angular-prime-directive
 ```
 
-To your bower.json file. Then run
-
-```html
-bower install
-```
-
-This will copy the angular-prime-directive files into your components folder, along with its dependencies.
+This will install the angular-prime-directive files into your node_modules folder, along with its dependencies.
 
 Load the script files in your application:
 ```html
-<script type="text/javascript" src="components/angular/angular.js"></script>
-<script type="text/javascript" src="components/angular-prime-directive/src/js/primeDirective.js"></script>
-<link rel="stylesheet" href="components/angular-prime-directive/src/css/primeDirective.css">
+<link rel="stylesheet" href="node_modules/angular-prime-directive/src/css/primeDirective.css">
+
+<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="node_modules/angular-prime-directive/src/js/primeDirective.js"></script>
 ```
 
 Add the date module as a dependency to your application module:

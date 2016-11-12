@@ -18,36 +18,39 @@ angular.module('ui.prime.directive', [])
     'use strict';
 
     return {
-      restrict: 'A',
+      restrict: 'E',
       template: '<div class=\'prime-directive\'>' +
-        '<table class=\'table-condensed\'>' +
-        '   <thead>' +
-        '       <tr>' +
-        '           <th >' +
-        '             <a class=\'previous\' href=\'\' data-ng-click="changeView(data.leftValue ,$event)">&lt;&lt;&nbsp;Previous</a>&nbsp;' +
-        '           </th>' +
-        '           <th colspan=\'8\' title=\'AngularJS Prime Directive\'>&nbsp;Prime&nbsp;Number&nbsp;Table</th>' +
-        '           <th >' +
-        '             <a class=\'next\' href=\'\' data-ng-click="changeView(data.rightValue,$event)">Next&nbsp;&gt;&gt;</a>' +
-        '           </th>' +
-        '       </tr>' +
-        '   </thead>' +
-        '   <tbody>' +
-        '       <tr >' +
-        '           <td colspan=\'10\' >' +
-        '              <span    class=\'num\' ' +
-        '                       data-ng-repeat=\'value in data.values\'  ' +
-        '                       data-ng-class=\'{prime: value.prime}\' ' +
-        '                       >{{ value.display }}</span> ' +
-        '           </td>' +
-        '       </tr>' +
-        '   </tbody>' +
-        '</table></div>',
+      '<table class=\'table-condensed\'>' +
+      '   <thead>' +
+      '       <tr>' +
+      '           <th >' +
+      '             <a class=\'previous\' href=\'\' data-ng-click="changeView(data.leftValue ,$event)">&lt;&lt;&nbsp;Previous</a>&nbsp;' +
+      '           </th>' +
+      '           <th colspan=\'8\' title=\'AngularJS Prime Directive\'>&nbsp;Prime&nbsp;Number&nbsp;Table</th>' +
+      '           <th >' +
+      '             <a class=\'next\' href=\'\' data-ng-click="changeView(data.rightValue,$event)">Next&nbsp;&gt;&gt;</a>' +
+      '           </th>' +
+      '       </tr>' +
+      '   </thead>' +
+      '   <tbody>' +
+      '       <tr >' +
+      '           <td colspan=\'10\' >' +
+      '              <span    class=\'num\' ' +
+      '                       data-ng-repeat=\'value in data.values\'  ' +
+      '                       data-ng-class=\'{prime: value.prime}\' ' +
+      '                       data-ng-bind="value.display"></span> ' +
+      '           </td>' +
+      '       </tr>' +
+      '   </tbody>' +
+      '</table></div>',
       replace: true,
       scope: {},
       link: function (scope) {
 
-        var isPrime = function (value) {
+        scope.changeView = changeView;
+        scope.changeView(1, null);
+
+        function isPrime (value) {
           var result = value !== 1;
           if (value !== 2) {
             if (value % 2 === 0) {
@@ -61,9 +64,9 @@ angular.module('ui.prime.directive', [])
             }
           }
           return result;
-        };
+        }
 
-        scope.changeView = function (startValue, event) {
+        function changeView (startValue, event) {
           if (event) {
             event.stopPropagation();
             event.preventDefault();
@@ -72,25 +75,17 @@ angular.module('ui.prime.directive', [])
           if (startValue < 1) {
             startValue = 1;
           }
-          var result = {
+          scope.data = {
             'leftValue': startValue - 100,
             'rightValue': startValue + 100,
-            'values': []
+            'values': Array.apply(null, { length: 100 }).map((value, index) => {
+              return {
+                'display': startValue + index,
+                'prime': isPrime(startValue + index)
+              };
+            })
           };
-
-          for (var i = 0; i < 100; i = i + 1) {
-            var value = {
-              'display': startValue + i,
-              'prime': isPrime(startValue + i)
-            };
-
-            result.values.push(value);
-          }
-
-          scope.data = result;
-        };
-
-        scope.changeView(1, null);
+        }
       }
     };
   }]);

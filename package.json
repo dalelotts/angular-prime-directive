@@ -6,30 +6,29 @@
   "license": "MIT",
   "homepage": "https://github.com/dalelotts/angular-prime-directive",
   "main": "src/js/sortableColumn.js",
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
   "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-bump": "^0.3.0",
-    "gulp": "^3.8.11",
-    "gulp-jscs": "^1.4.0",
-    "gulp-jshint": "^1.9.4",
-    "jshint": "^2.6.0",
-    "jshint-stylish": "^2.0.1",
-    "karma": "^0.13.3",
-    "karma-chrome-launcher": "^0.2.0",
-    "karma-coverage": "^0.4.2",
-    "karma-firefox-launcher": "^0.1.3",
-    "karma-jasmine": "^0.3.2",
-    "karma-phantomjs-launcher": "^0.2.0",
-    "karma-threshold-reporter": "^0.1.12",
-    "lodash": "^3.5.0",
-    "matchdep": "^0.3.0",
-    "phantomjs": "^1.9.12",
-    "plato": "^1.5.0"
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jshint": "^2.0.2",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-threshold-reporter": "^0.1.15",
+    "lodash": "^4.16.6",
+    "matchdep": "^1.0.1",
+    "phantomjs": "^2.1.7",
+    "plato": "^1.7.0"
   },
   "scripts": {
-    "test": "gulp",
-    "postinstall": "bower install"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",

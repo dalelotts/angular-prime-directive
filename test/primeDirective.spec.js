@@ -17,7 +17,7 @@ describe('sortable column', function () {
   beforeEach(module('ui.prime.directive'));
 
   beforeEach(inject(function ($compile, $rootScope) {
-    element = $compile('<div data-prime-directive ></div>')($rootScope);
+    element = $compile('<prime-directive ></prime-directive>')($rootScope);
     $rootScope.$digest();
   }));
 
